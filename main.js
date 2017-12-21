@@ -1,7 +1,7 @@
 let delayInterval;
 let delayFunction = event => {
 	clearInterval(delayInterval);
-	match = event.code.match(/Digit(\d)/);
+	match = event.code.match(/(?:Digit|Numpad)(\d)/);
 	if (match) {
 		division = Number(match[1]);
 		if (division == 0) return;
